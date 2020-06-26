@@ -3,17 +3,8 @@
     <section class="wrapper">
       <h2>Featured Items</h2>
       <ul class="featured-items">
-        <li
-          v-for="product in products"
-          :key="product.id"
-          class="featured-items__item"
-        >
-          <img
-            v-for="img in product.images"
-            :key="img"
-            class="product-image"
-            :src="'../assets/img/products/' + img"
-          />
+        <li v-for="product in products" :key="product" class="product-image">
+          <img class="product-image" :src="imagePath(product)" alt="" />
           <p class="product-title">{{ product.name }}</p>
           <p>
             <em>{{ product.price }},-</em>
@@ -34,7 +25,6 @@ export default {
   },
   methods: {
     imagePath(product) {
-      // eslint-disable-next-line no-undef
       return require(`../assets/img/products/${product.images[0]}`);
     }
   }
