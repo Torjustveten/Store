@@ -8,7 +8,12 @@
           :key="product.id"
           class="featured-items__item"
         >
-          <img class="product-image" :src="assest / img / products" alt />
+          <img
+            v-for="img in product.images"
+            :key="img"
+            class="product-image"
+            :src="'../assets/img/products/' + img"
+          />
           <p class="product-title">{{ product.name }}</p>
           <p>
             <em>{{ product.price }},-</em>
@@ -29,6 +34,7 @@ export default {
   },
   methods: {
     imagePath(product) {
+      // eslint-disable-next-line no-undef
       return require(`../assets/img/products/${product.images[0]}`);
     }
   }

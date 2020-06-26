@@ -65,7 +65,7 @@ export default new Vuex.Store({
           Weight: "1.38kg",
           Additional: "157 ppi"
         },
-        images: ["matebook14-mystic-silver.jpg"]
+        images: ["matebook14-mystic-silver.png"]
       },
       {
         name: "Huawei Matebook 13",
