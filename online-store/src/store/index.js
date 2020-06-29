@@ -23,7 +23,7 @@ export default new Vuex.Store({
         details: {
           material: "Aliminum",
           cpu: "4 core 8 thread Intel Core i7 10510U/4.9 GHz",
-          gpu: "Nvidia GeForce MC250 / Intel UHD 620",
+          gpu: "Nvidia GeForce MX250 / Intel UHD 620",
           memory: "2GB Video memory/Dual Channel 16GB RAM 2133Mhz",
           storage: "512GB SDD PCIe",
           battery: "56 Wh, up to 13 hours",
@@ -83,7 +83,7 @@ export default new Vuex.Store({
         details: {
           material: "Aliminum",
           cpu: "4 core 8 thread Intel Core i7 8565U/1.8GHz",
-          gpu: "Nviadia GeForce MX250/Intel UHD 620",
+          gpu: "Nvidia GeForce MX250/Intel UHD 620",
           memory: "2GB Video Memory/Dual Channel 8GB RAM 2133MHz",
           storage: "512GB SDD PCIe",
           battery: "56 Wh, up to 13 hours",
@@ -126,5 +126,10 @@ export default new Vuex.Store({
     ]
   },
   mutations: {},
-  actions: {}
+  actions: {},
+  getters: {
+    product: (state) => (id) => {
+      return state.products.filter(p => p.id === Number(id))[0]
+    }
+  }
 });

@@ -4,11 +4,13 @@
       <h2>Featured Items</h2>
       <ul class="featured-items">
         <li v-for="product in products" :key="product" class="product-image">
+          <router-link :to="{ name: 'product', params: { id: product.id}}"> 
           <img class="product-image" :src="imagePath(product)" alt="" />
           <p class="product-title">{{ product.name }}</p>
           <p>
-            <em>{{ product.price }},-</em>
+            <em>{{ product.price }} ,-</em>
           </p>
+          </router-link>
         </li>
       </ul>
     </section>
@@ -17,7 +19,7 @@
 
 <script>
 export default {
-  name: "home",
+  name: 'home',
   computed: {
     products: function() {
       return this.$store.state.products;
