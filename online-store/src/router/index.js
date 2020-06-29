@@ -5,7 +5,7 @@ import Product from '../views/Product.vue';
 import Cart from '../views/Cart.vue';
 
 Vue.use(Router);
-export default  new Router({
+export default new Router({
 
   routes: [
   {

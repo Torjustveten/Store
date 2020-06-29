@@ -1,7 +1,7 @@
 <template>
   <div>
     <section class="wrapper">
-      <h2>Featured Items</h2>
+      <h2 class="Product-title">Laptops</h2>
       <ul class="featured-items">
         <li v-for="product in products" :key="product" class="product-image">
           <router-link :to="{ name: 'product', params: { id: product.id}}"> 
@@ -41,6 +41,7 @@ export default {
     max-width: 100%;
     padding: 1rem;
     text-align: center;
+    background-color: #efece3;
   }
 }
 .featured-items {
@@ -64,5 +65,14 @@ export default {
 }
 .product-title {
   font-weight: bold;
+  color: black;
+}
+
+a:link{
+  text-decoration: none!important;
+}
+
+p {
+  color: black;
 }
 </style>
