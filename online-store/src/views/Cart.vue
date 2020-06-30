@@ -5,6 +5,7 @@
         <li v-for="item in cartItems" :key="item.name">
             <div>
                 <p>{{item.name}}</p>
+                <p>{{item.color}}</p>
                 <p>{{item.price}} kr</p>    
             </div>
             <button @click="removeFromCart(item.id)" class="btn cart-list-remove">
