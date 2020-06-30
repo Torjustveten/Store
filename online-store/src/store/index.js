@@ -125,11 +125,31 @@ export default new Vuex.Store({
       }
     ]
   },
-  mutations: {},
-  actions: {},
+  mutations: {
+    addToCart(state, payload) {
+      state.cart.push( Number(payload) )
+    },
+    decrementProductInventory(state, payload) {
+      let product = state.products.find(product => product.id === Number(payload))
+      product.quantity--;
+    }
+  },
+  actions: {
+    addToCart({ commit }, payload) {
+      commit('addToCart', payload)
+      commit('decrementProductInventory', payload)
+    }
+  },
   getters: {
     product: (state) => (id) => {
       return state.products.filter(p => p.id === Number(id))[0]
+    },
+    cartItems: (state) => {
+      return state.cart.map(
+        itemId => state.products.find(
+          product => product.id === itemId
+        )
+      )
     }
   }
 });

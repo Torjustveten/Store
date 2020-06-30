@@ -5,6 +5,7 @@
                 <img class="flex-co-2" :src="imagePath(product)" alt="">
                 <div class="flex-co-2">
             <h2>{{ product.name }}</h2>
+            <button @click="addToCart" class="cart-btn">Add to Cart</button>
             <p>Price: {{product.price}}kr</p>
             <p>Color: {{product.color}}</p>
             <p>Display: {{product.display}}</p>
@@ -44,6 +45,9 @@ export default {
     methods: {
         imagePath(product) {
             return require(`../assets/img/products/${product.images[0]}`);
+        },
+        addToCart() {
+            this.$store.dispatch('addToCart', this.$route.params.id)
         }
     }
 };
@@ -61,5 +65,23 @@ export default {
 
 ul {
     list-style-type:none;
+}
+
+.btn {
+  padding: .5rem .75rem;
+  border-radius: 3px;
+  border: none;
+  background-color: transparent;
+  font-size: .9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all .15s ease;
+}
+.cart-btn {
+  background-color: #2c3e50;
+  color: #FFF;
+  &:hover, &:focus {
+    background-color: #42b983;
+  }
 }
 </style>
