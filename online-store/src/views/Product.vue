@@ -81,7 +81,7 @@ ul {
   background-color: #2c3e50;
   color: #FFF;
   &:hover, &:focus {
-    background-color: #42b983;
+    background-color: #3d5469;
   }
 }
 </style>
