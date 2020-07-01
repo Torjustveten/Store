@@ -1,39 +1,40 @@
 <template>
 <div class="wrapper">
     <h1>Cart</h1>
-    <ul class="cart-list">
-        <li v-for="item in cartItems" :key="item.id" class="flex col cart-list__item">
-        <img class="thumbnail" :src="imagePath(item)" alt=""/>
-            <div class="flex-col cart-list__item__details">
-                <div>
-                    <p>{{item.name}}</p>
-                    <p>{{item.price}} kr</p> 
-                </div>   
-            </div>
-            <button @click="removeFromCart(item.id)" class="btn_cart-list-remove">
-                Remove
-            </button>
-        </li>
-    </ul>
-    <section class="total-section">
-        <ul class="total-section-list">
-            <li class="total-section_item">
-                <p>{{cartItemsCount}} Items</p>
-                <p>Total {{ItemsSubtotal}} kr</p>
-                <p class="shipping-options">
-                    <select v-model="selectedShippingOptions" 
-                    class="total-section__item__label">Shipping
-                        <option disabled value="">Select shipping</option>
-                        <option v-for= "option in shippingOptionsArray" 
-                        :key= "option.text"
-                        value= "option.rate">
-                        {{option.text}} - {{option.rate}}kr
-                        </option>
-                    </select>
-                </p>
-            </li>
-        </ul>
-    </section>
+    <div class="flex-col">
+      <ul class="cart-list">
+          <li v-for="item in cartItems" :key="item.id" class="flex-col cart-list__item">
+          <img class="thumbnail" :src="imagePath(item)" alt=""/>
+              <div class="flex-col cart-list__item__details">
+                  <div>
+                      <p>{{item.name}}</p>
+                      <p>{{item.price}} kr</p> 
+                  </div>   
+              </div>
+              <button @click="removeFromCart(item.id)" class="btn_cart-list-remove">
+                  Remove
+              </button>
+          </li>
+      </ul>
+      <section class="total-section">
+          <ul class="total-section-list">
+              <li class="total-section_item">
+                  <p class="total-section__item__label">{{cartItemsCount}} Items</p>
+                  <p>Total {{ItemsSubtotal}} kr</p>
+                  <p class="shipping-options">
+                      <select v-model="selectedShippingOptions">Shipping
+                          <option disabled value="">Select shipping</option>
+                          <option v-for= "option in shippingOptionsArray" 
+                          :key= "option.text"
+                          value= "option.rate">
+                          {{option.text}} - {{option.rate}}kr
+                          </option>
+                      </select>
+                  </p>
+              </li>
+          </ul>
+      </section>
+  </div>
 </div>
 </template>
 
