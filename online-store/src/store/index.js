@@ -123,7 +123,7 @@ export default new Vuex.Store({
         },
         images: ["matebookD14-mystic-silver.png", "matebookD14-space-gray.png"]
       }
-    ]
+    ],
   },
   mutations: {
     addToCart(state, payload) {

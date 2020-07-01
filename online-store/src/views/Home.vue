@@ -8,7 +8,7 @@
           <img class="product-image" :src="imagePath(product)" alt="" />
           <p class="product-title">{{ product.name }}</p>
           <p>
-            <em>{{ product.price }} ,-</em>
+            <em>{{product.price}} ,-</em>
           </p>
           </router-link>
         </li>
@@ -41,9 +41,13 @@ export default {
     max-width: 100%;
     padding: 1rem;
     text-align: center;
-    background-color: #efece3;
   }
 }
+
+body {
+  background-color: #eeeeee;
+}
+
 .featured-items {
   padding-left: 0;
   list-style: none;
