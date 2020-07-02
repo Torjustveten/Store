@@ -66,7 +66,7 @@ export default {
         ItemsSubtotal() {
             return this.cartItems.reduce((total, item) => total + item.price, 0)
         },
-        subtotal() {
+        totalPrice() {
             if (this.selectedShippingOptions) {
                 return Number(this.ItemsSubtotal) + Number(this.selectedShippingOptions);
             }
@@ -94,6 +94,7 @@ export default {
 .cart-list__item {
   width: 100%;
   border-bottom: 1px solid #2c3e50;
+  background-color: #FAFAFA
 }
 .cart-list__item__details {
   flex: 2;
@@ -101,9 +102,10 @@ export default {
   margin-left: 2rem;
 }
 .btn_cart-list-remove {
-  margin-top: .5rem;
-  &:hover {
-    color: #42b983;
+  border: none;
+  font-weight: bold;
+  &:focus {
+    outline: none;
   }
 }
 .thumbnail {
