@@ -1,7 +1,7 @@
 <template>
   <div>
     <section class="wrapper">
-      <h2 class="Product-title">Laptops</h2>
+      <h2 class="Product-title"></h2> <!--Product text-->
       <ul class="featured-items">
         <li v-for="product in products" :key="product" class="product-image">
           <router-link :to="{ name: 'product', params: { id: product.id}}"> 
@@ -71,7 +71,6 @@ body {
   font-weight: bold;
   color: black;
 }
-
 a:link{
   text-decoration: none!important;
 }

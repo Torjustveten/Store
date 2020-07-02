@@ -24,7 +24,5 @@ export default {
   border-radius: 20px;
   background-color: #42b983;
   color: #FFF;
-  font-weight: bold;
-  font-size: 12px;
 }
 </style>

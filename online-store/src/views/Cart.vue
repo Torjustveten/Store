@@ -1,6 +1,5 @@
 <template>
 <div class="wrapper">
-    <h1>Cart</h1>
     <div class="flex-col">
       <ul class="cart-list">
           <li v-for="item in cartItems" :key="item.id" class="flex-col cart-list__item">
@@ -20,7 +19,6 @@
           <ul class="total-section-list">
               <li class="total-section_item">
                   <p class="total-section__item__label">{{cartItemsCount}} Items</p>
-                  <p>Total {{ItemsSubtotal}} kr</p>
                   <p class="shipping-options">
                       <select v-model="selectedShippingOptions">Shipping
                           <option disabled value="">Select shipping</option>
@@ -31,8 +29,10 @@
                           </option>
                       </select>
                   </p>
+                  <p>Total {{ItemsSubtotal}} kr</p>
               </li>
           </ul>
+          <button :disabled="!this.selectedShippingOption" class="btn-checkout">Check out</button>
       </section>
   </div>
 </div>
@@ -94,7 +94,6 @@ export default {
 .cart-list__item {
   width: 100%;
   border-bottom: 1px solid #2c3e50;
-  background-color: #FAFAFA
 }
 .cart-list__item__details {
   flex: 2;
@@ -116,6 +115,7 @@ export default {
   background: #FAFAFA;
   padding: 0 1rem 1rem;
   min-width: 33%;
+  margin-top: 1rem;
 }
 .total-section-list {
   margin: 0;
@@ -128,5 +128,17 @@ export default {
 .total-section__item__label {
   font-weight: bold;
   margin-right: 1rem;
+}
+.flex-col {
+  margin-top: 1rem;
+}
+.btn-checkout {
+  width: 100%;
+  color: #FFF;
+  outline-color: black;
+  background-color: #2c3e50;
+  &:hover, &:focus {
+    background-color: #3d5469;
+  }
 }
 </style>

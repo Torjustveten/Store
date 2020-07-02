@@ -2,9 +2,9 @@
     <div>
         <section class="wrapper">
             <div class="flex-co">
-                <img class="flex-co-2" :src="imagePath(product)" alt="">
+            <h2 class="title">{{ product.name }}</h2>
+                <img class="flex-co-2_image" :src="imagePath(product)" alt="">
                 <div class="flex-co-2">
-            <h2>{{ product.name }}</h2>
             <button @click="addToCart" class="cart-btn">Add to Cart</button>
             <p>Price: {{product.price}}kr</p>
             <p>Color: {{product.color}}</p>
@@ -83,5 +83,11 @@ ul {
   &:hover, &:focus {
     background-color: #3d5469;
   }
+}
+.flex-co-2_image {
+    width: 30%;
+}
+.title {
+    margin-top: 1rem;
 }
 </style>
