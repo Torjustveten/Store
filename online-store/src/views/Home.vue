@@ -7,7 +7,7 @@
           <router-link :to="{ name: 'product', params: { id: product.id}}"> 
           <img class="product-image" :src="imagePath(product)" alt="" />
           <p class="product-title">{{ product.name }}</p>
-          <p>
+          <p class="product-price">
             <em>{{product.price}} ,-</em>
           </p>
           </router-link>
@@ -43,11 +43,6 @@ export default {
     text-align: center;
   }
 }
-
-body {
-  background-color: #eeeeee;
-}
-
 .featured-items {
   padding-left: 0;
   list-style: none;
@@ -66,16 +61,18 @@ body {
 }
 .product-image {
   max-height: 200px;
+  margin-top: 50px;
 }
 .product-title {
   font-weight: bold;
   color: black;
 }
+.product-price {
+  font-weight: normal;
+  color: black;
+  text-align: center;
+}
 a:link{
   text-decoration: none!important;
-}
-
-p {
-  color: black;
 }
 </style>

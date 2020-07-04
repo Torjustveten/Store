@@ -134,9 +134,9 @@ export default {
 }
 .btn-checkout {
   width: 100%;
-  color: #FFF;
+  color: #eeeeee;
   outline-color: black;
-  background-color: #2c3e50;
+  background-color: #3d5469;
   &:hover, &:focus {
     background-color: #3d5469;
   }

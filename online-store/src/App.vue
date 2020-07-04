@@ -4,12 +4,10 @@
       <h1 class="flex-col--2"></h1> <!--Store Name-->
       <div class="flex-col--2 nav-items">
         <router-link to="/" class="nav-items__item">Home</router-link>
-        <div class="search">
+        <!--<div class="search">
           <input type="text" placeholder="Search.." class="nav-search">
-        <button type="submit" class="search-btn">
-          <i class="fa fa-search"></i>
-        </button>
-        </div>
+        <button type="submit" class="search-btn"> <i class="fa fa-search"></i></button>
+        </div> -->
         <!--<select>Categories</select>-->
           <router-link to="/login" class="nav-items__item-right">Login</router-link>
           <router-link to="/cart" class="nav-items__item-cart">
@@ -38,26 +36,30 @@ export default {
 
 <style lang="scss">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  height: 70px;
+  height: 80px;
+  background-color: #343d46;
 }
 #nav {
+  margin-top: 0;
   padding: 30px;
   a {
-    font-weight: bold;
-    color: #2c3e50;
+    color: #cecece;
     &.router-link-exact-active {
-      color: #42b983;
+      color: #eeeeee;
     }
   }
 }
 .nav-items {
   justify-content: flex-end;
   display: flex;
-  background-color: black;
+  font-family: 'IBM Plex Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: normal;
+}
+body {
+  background-color: #eeeeee;
 }
 .nav-items__item {
   margin-left: 1rem;
@@ -75,31 +77,26 @@ export default {
 
 .fa-shopping-cart {
   font-size: 20px;
-  color: #2c3e50;
+  color: #cecece;
   &:active {
-    color: #3d5469;
+    color: #eeeeee;
   }
 }
 ul {
   padding-left: 0;
   list-style: none;
 }
-.search {
+/*.search {
   position: fixed;
   margin-left: 30rem;
   color: #2c3e50;
   border: none;
 }
-.search {
-  color: #2c3e50;
-  border: none;
-  height: 40px;
-}
 .search-btn {
   width: 40px;
   height: 36px;
   border: 1px solid #42b983;
-  background: #42b983;
+  background-color: #42b983;
   text-align: center;
   color: #fff;
   border-radius: 0 5px 5px 0;
@@ -108,8 +105,5 @@ ul {
   &:focus, &:active {
     border: none;
   }
-}
-
-
-
+}*/
 </style>

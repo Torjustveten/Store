@@ -6,28 +6,30 @@
                 <img class="flex-co-2_image" :src="imagePath(product)" alt="">
                 <div class="flex-co-2">
             <button @click="addToCart" class="cart-btn">Add to Cart</button>
-            <p>Price: {{product.price}}kr</p>
-            <p>Color: {{product.color}}</p>
-            <p>Display: {{product.display}}</p>
-            <p>Touch: {{product.touch}}</p>
-            <p>Resolution: {{product.resolution}}</p>
-            <p>Fingerprint: {{product.fingerprint}}</p>
-            <p>Brightness: {{product.brightness}}</p>
+            <div class="details">
+            <p><b>Price:</b> {{product.price}}kr</p>
+            <p><b>Color:</b> {{product.color}}</p>
+            <p><b>Display:</b> {{product.display}}</p>
+            <p><b>Touch:</b> {{product.touch}}</p>
+            <p><b>Resolution:</b> {{product.resolution}}</p>
+            <p><b>Fingerprint:</b> {{product.fingerprint}}</p>
+            <p><b>Brightness:</b> {{product.brightness}}</p>
             <p><em>{{product.quantity}} left in stock</em></p>
-            <h3>Details</h3>
+            <h3 class="details-h">Details</h3>
             <ul>
-                <li>Material: {{product.details.material}}</li>
-                <li>Prossesor: {{product.details.cpu}}</li>
-                <li>Graphics: {{product.details.gpu}}</li>
-                <li>Memory: {{product.details.memory}}</li>
-                <li>Storage: {{product.details.storage}}</li>
-                <li>Battery: {{product.details.battery}}</li>
-                <li>Speakers: {{product.details.speakers}}</li>
-                <li>Camera: {{product.details.camera}}</li>
-                <li>Wireless: {{product.details.wireless}}</li>
-                <li>Weight: {{product.details.weight}}</li>
-                <li>Additional: {{product.details.additional}}</li>
+                <li><b>Material:</b> {{product.details.material}}</li>
+                <li><b>Prossesor:</b> {{product.details.cpu}}</li>
+                <li><b>Graphics:</b> {{product.details.gpu}}</li>
+                <li><b>Memory:</b> {{product.details.memory}}</li>
+                <li><b>Storage:</b> {{product.details.storage}}</li>
+                <li><b>Battery:</b> {{product.details.battery}}</li>
+                <li><b>Speakers:</b> {{product.details.speakers}}</li>
+                <li><b>Camera:</b> {{product.details.camera}}</li>
+                <li><b>Wireless:</b> {{product.details.wireless}}</li>
+                <li><b>Weight:</b> {{product.details.weight}}</li>
+                <li><b>Additional:</b> {{product.details.additional}}</li>
             </ul>
+            </div>
             </div>
             </div>
         </section>
@@ -68,26 +70,32 @@ ul {
 }
 
 .btn {
-  padding: .5rem .75rem;
-  border-radius: 3px;
-  border: none;
-  background-color: transparent;
-  font-size: .9rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all .15s ease;
+    padding: .5rem .75rem;
+    border-radius: 3px;
+    border: none;
+    background-color: transparent;
+    font-size: .9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .15s ease;
 }
 .cart-btn {
-  background-color: #2c3e50;
-  color: #FFF;
-  &:hover, &:focus {
     background-color: #3d5469;
+    color: #eeeeee;
+    border: none;
   }
-}
 .flex-co-2_image {
     width: 30%;
 }
 .title {
-    margin-top: 1rem;
+    margin-top: 50px;
+}
+.details {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-style: normal; 
+    margin-top: 15px; 
+}
+.details-h{
+    font-weight: bold;
 }
 </style>
