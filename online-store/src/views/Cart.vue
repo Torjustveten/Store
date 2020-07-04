@@ -136,9 +136,9 @@ export default {
   width: 100%;
   color: #eeeeee;
   outline-color: black;
-  background-color: #3d5469;
+  background-color: #2c3e50;
   &:hover, &:focus {
-    background-color: #3d5469;
+    background-color: #2c3e50;
   }
 }
 </style>

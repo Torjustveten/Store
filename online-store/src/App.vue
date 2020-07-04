@@ -31,7 +31,17 @@ export default {
     }
   }
 }
-//window.onscroll = function({scrollfunction})
+/*window.onscroll = function() {stickyNav()};
+var  = document.getElementById("wrapper")
+var sticky = wrapper.offsetTop;
+
+function stickyNav() {
+  if (window.pageYOffset >= sticky) {
+    wrapper.classList.add("sticky")
+  } else {
+    wrapper.classList.remove("sticky");
+  }
+}*/
 </script>
 
 <style lang="scss">
@@ -66,7 +76,7 @@ body {
   position: fixed;
   overflow: hidden;
 }
-.nav-items__item-cart {
+.nav-items__item-cart{
   margin-left: 40rem;
   position: fixed;
 }
@@ -81,10 +91,6 @@ body {
   &:active {
     color: #eeeeee;
   }
-}
-ul {
-  padding-left: 0;
-  list-style: none;
 }
 /*.search {
   position: fixed;

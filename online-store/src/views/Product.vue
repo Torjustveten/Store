@@ -6,7 +6,7 @@
                 <img class="flex-co-2_image" :src="imagePath(product)" alt="">
                 <div class="flex-co-2">
             <button @click="addToCart" class="cart-btn">Add to Cart</button>
-            <div class="details">
+            <div class="detail">
             <p><b>Price:</b> {{product.price}}kr</p>
             <p><b>Color:</b> {{product.color}}</p>
             <p><b>Display:</b> {{product.display}}</p>
@@ -15,8 +15,8 @@
             <p><b>Fingerprint:</b> {{product.fingerprint}}</p>
             <p><b>Brightness:</b> {{product.brightness}}</p>
             <p><em>{{product.quantity}} left in stock</em></p>
-            <h3 class="details-h">Details</h3>
-            <ul>
+            <h3 class="detail-h">Details</h3>
+            <ul class="detail-info">
                 <li><b>Material:</b> {{product.details.material}}</li>
                 <li><b>Prossesor:</b> {{product.details.cpu}}</li>
                 <li><b>Graphics:</b> {{product.details.gpu}}</li>
@@ -90,12 +90,19 @@ ul {
 .title {
     margin-top: 50px;
 }
-.details {
+.detail {
     font-family: 'IBM Plex Sans', sans-serif;
     font-style: normal; 
     margin-top: 15px; 
 }
-.details-h{
+.detail-h{
     font-weight: bold;
+}
+.detail-info {
+  list-style: none;
+}
+ul {
+  padding-left: 0;
+  list-style: none;
 }
 </style>
